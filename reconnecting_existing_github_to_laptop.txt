@@ -1,0 +1,52 @@
+Below are the exact steps to connect your GitHub account to your computer so you can push/pull code from your repo.
+
+
+✅ Step 1 — Install Git
+
+
+Windows
+
+Download Git:
+[https://git-scm.com/download/win](https://git-scm.com/download/win)
+
+
+✅ Step 2 — Configure Git with your name & email
+
+These identify your commits:
+
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+
+✅ Step 3 — Create an SSH key (recommended)
+
+This connects your computer to GitHub securely **without entering password every time**.
+
+Run:
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+
+Then enable the SSH agent:
+
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+
+✅ Step 4 — Add your SSH key to GitHub
+
+Copy your public key:
+
+
+
+
+Now go to GitHub:
+➡️ Click your profile picture → **Settings**
+➡️ **SSH and GPG keys**
+➡️ **New SSH key**
+Paste the key → Save.
+
+Your computer is now linked to GitHub.
